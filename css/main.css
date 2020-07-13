@@ -143,6 +143,15 @@ aside header .icon-nav{
   border-radius: 5px;
 }
 
+.answer {
+  background-color: #EAEAEA;
+  padding: 5px;
+  margin: 5px 0;
+  font-size: 1.2rem;
+  border-radius: 5px;
+  align-self: flex-start;
+}
+
 /* FOOTER */
 
 main footer {
