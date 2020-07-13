@@ -15,7 +15,7 @@ body {
 }
 
 aside {
-  width: 25%;
+  width: 30%;
   height: 100vh;
   display: flex;
   flex-direction: column;
@@ -23,7 +23,7 @@ aside {
 }
 
 main {
-  width: 75%;
+  width: 70%;
   height: 100vh;
   display: flex;
   flex-direction: column;
@@ -61,7 +61,16 @@ header .icon-nav {
    align-items: center;
    min-width: 10%;
    font-size: 1.3rem;
-   color: #B3B3B3;
+
+}
+
+header .icon-nav i {
+  color: #B3B3B3;
+  cursor: pointer;
+  transition: color 0.3s;
+}
+header .icon-nav i:hover {
+   color: #6A7376;
 }
 aside header .icon-nav{
   min-width: 25%;
@@ -71,6 +80,13 @@ aside header .icon-nav{
 
 .contact-list {
     height: calc(100% - 80px);
+    overflow-y: auto;
+}
+
+.contact-list span , header span{
+  color: #B3B3B3;
+  font-weight: bold;
+  font-size: 0.9rem;
 }
 
 .contact-list .contact , .contact-list .notification, .search{
@@ -82,6 +98,11 @@ aside header .icon-nav{
 
 .contact-list .contact {
   justify-content: space-between;
+  transition: background-color 0.3s;
+}
+.contact-list .contact:hover {
+  justify-content: space-between;
+  background-color: #E9EBEB;
 }
 .contact-list .notification {
   justify-content: flex-start;
@@ -103,7 +124,7 @@ aside header .icon-nav{
 }
 
 .search {
-  height: 60px;
+  height: 50px;
   padding: 5px 10px;
   text-align: center;
   background-color: #EAEAEA;
@@ -113,12 +134,12 @@ aside header .icon-nav{
   height: 100%;
   border: 1px solid #B7B9BB;
   border-left: none;
-  font-size: 1.1rem;
+  font-size: 1rem;
 }
 .search i {
   width: 10%;
   background-color: #fff;
-  padding: 15.5px 13px;
+  padding: 10.5px 13px;
   border: 1px solid #B7B9BB;
   border-right: none;
   color: #B7B9BB;
@@ -135,22 +156,33 @@ aside header .icon-nav{
    padding: 1rem;
    height: calc(100% - 140px);
    background-image: url("../img/wallpaper.png");
+   overflow-y: auto;
  }
 .sent-message {
   background-color: #D5F9BA;
-  padding: 5px;
+  padding: 12px;
   margin: 5px 0;
-  font-size: 1.2rem;
+  font-size: 1.25rem;
   border-radius: 5px;
+  position: relative;
+}
+.sent-message span, .answer span {
+  font-size: 0.7rem;
+  color: #B7B9BB;
+  position: absolute;
+  bottom: 0;
+  right:0;
+  font-size: bold;
 }
 
 .answer {
   background-color: #EAEAEA;
-  padding: 5px;
+  padding: 12px;
   margin: 5px 0;
-  font-size: 1.2rem;
+  font-size: 1.25rem;
   border-radius: 5px;
   align-self: flex-start;
+  position: relative;
 }
 
 /* FOOTER */
