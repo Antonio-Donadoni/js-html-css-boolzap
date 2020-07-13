@@ -113,6 +113,7 @@ aside header .icon-nav{
   height: 100%;
   border: 1px solid #B7B9BB;
   border-left: none;
+  font-size: 1.1rem;
 }
 .search i {
   width: 10%;
@@ -173,11 +174,12 @@ main footer #message {
   width: 90%;
   border: none;
   border-radius: 5px;
-  text-align: right;
   padding: 0 10px;
+  font-size: 1.2rem;
 
 }
 main footer button {
   height: 100%;
   width: 8%;
+  font-size: 1.2rem;
 }

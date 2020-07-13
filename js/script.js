@@ -3,6 +3,7 @@ function sendMsg() {
   var myMessage = $("#message").val();
   myClone.text(myMessage);
   $('#chat-main').append(myClone);
+
 }
 
 function addAnswer() {
@@ -14,13 +15,20 @@ function init() {
   // MANDA MESSAGGIO CLICK BTN
   var sendBtn = $("#send-button");
   sendBtn.click(function() {
-  sendMsg();
-  setTimeout(addAnswer, 1000);
+  // CONTROLLO STRINGA VUOTA
+  if ($("#message").val()) {
+    sendMsg();
+    // RISPOSTA DOPO 1 S
+    setTimeout(addAnswer, 1000);
+    $("#message").val(" ");
+  }
+
     });
  // MANDA MESSAGGIO PRESS ENTER
   $('.input').keydown(function(event){
   if (event.which == 13) {
     sendMsg();
+    // RISPOSTA DOPO 1 S
     setTimeout(addAnswer, 1000);
   }
   });
