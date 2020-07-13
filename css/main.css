@@ -1,0 +1,53 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+/* STRUTTURA BASE */
+
+.main-container {
+  display: flex;
+}
+
+aside {
+  background-color: yellow;
+  width: 25%;
+  height: 80vh;
+  display: flex;
+  flex-direction: column;
+}
+
+main {
+  width: 75%;
+  height: 80vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+main header, main footer, aside header {
+height: 70px;
+background-color: #ccc;
+display: flex;
+justify-content: space-between;
+align-items: center;
+width: 100%;
+}
+
+
+
+/* PARTE CHAT */
+ #chat-main {
+   display: flex;
+   flex-direction: column;
+   justify-content: flex-start;
+   align-items: flex-end;
+   width: 100%;
+   padding: 1rem;
+ }
+.sent-message {
+  background-color: lightgreen;
+  padding: 5px;
+  margin: 5px 0;
+
+}
