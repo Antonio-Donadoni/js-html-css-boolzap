@@ -3,6 +3,11 @@
   padding: 0;
   box-sizing: border-box;
 }
+body {
+  font-family: 'Roboto', sans-serif;
+}
+
+
 /* STRUTTURA BASE */
 
 .main-container {
@@ -10,11 +15,11 @@
 }
 
 aside {
-  background-color: yellow;
   width: 25%;
   height: 100vh;
   display: flex;
   flex-direction: column;
+  border-right: 1px solid #B3B3B3;
 }
 
 main {
@@ -26,7 +31,7 @@ main {
 }
 
 main header, main footer, aside header {
-height: 70px;
+height: 80px;
 background-color: #EAEAEA;
 display: flex;
 justify-content: space-between;
@@ -35,6 +40,88 @@ width: 100%;
 padding: 10px 0;
 }
 
+
+/* HEADER  */
+
+header .contact-img, .contact-list .contact-img {
+   display: flex;
+   align-items: center;
+   padding-left: 10px;
+}
+
+.contact-img img {
+  height: 65px;
+  border-radius: 50%;
+  margin-right: 5px;
+}
+
+header .icon-nav {
+   display: flex;
+   justify-content: space-around;
+   align-items: center;
+   min-width: 10%;
+   font-size: 1.3rem;
+   color: #B3B3B3;
+}
+aside header .icon-nav{
+  min-width: 25%;
+}
+
+/* PARTE CONTATTI */
+
+.contact-list {
+    height: calc(100% - 80px);
+}
+
+.contact-list .contact , .contact-list .notification, .search{
+  padding: 15px 10px;
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid #B3B3B3;
+}
+
+.contact-list .contact {
+  justify-content: space-between;
+}
+.contact-list .notification {
+  justify-content: flex-start;
+  padding-left: 15px;
+}
+.contact-list .notification i {
+  border-radius: 50%;
+  padding: 20px;
+  background-color: #8EDAFC;
+  margin-right: 5px;
+  color: #fff;
+  font-size: 1.35rem;
+}
+
+.last-msg-time {
+  align-self: flex-start;
+  font-weight: 300;
+  color: #B7B9BB;
+}
+
+.search {
+  height: 60px;
+  padding: 5px 10px;
+  text-align: center;
+  background-color: #EAEAEA;
+}
+.search input {
+  width: 90%;
+  height: 100%;
+  border: 1px solid #B7B9BB;
+  border-left: none;
+}
+.search i {
+  width: 10%;
+  background-color: #fff;
+  padding: 15.5px 13px;
+  border: 1px solid #B7B9BB;
+  border-right: none;
+  color: #B7B9BB;
+}
 
 
 /* PARTE CHAT */
@@ -53,29 +140,7 @@ padding: 10px 0;
   padding: 5px;
   margin: 5px 0;
   font-size: 1.2rem;
-}
-
-/* HEADER MAIN */
-
-header .contact-chat {
-   display: flex;
-   align-items: center;
-   padding-left: 10px;
-}
-
-main header img {
-  height: 50px;
-  border-radius: 50%;
-  margin-right: 5px;
-}
-
-header .icon-nav {
-   display: flex;
-   justify-content: space-around;
-   align-items: center;
-   min-width: 10%;
-   font-size: 1.3rem;
-   color: #B3B3B3;
+  border-radius: 5px;
 }
 
 /* FOOTER */
