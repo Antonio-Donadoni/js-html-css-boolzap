@@ -12,14 +12,14 @@
 aside {
   background-color: yellow;
   width: 25%;
-  height: 80vh;
+  height: 100vh;
   display: flex;
   flex-direction: column;
 }
 
 main {
   width: 75%;
-  height: 80vh;
+  height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -27,11 +27,12 @@ main {
 
 main header, main footer, aside header {
 height: 70px;
-background-color: #ccc;
+background-color: #EAEAEA;
 display: flex;
 justify-content: space-between;
 align-items: center;
 width: 100%;
+padding: 10px 0;
 }
 
 
@@ -44,10 +45,65 @@ width: 100%;
    align-items: flex-end;
    width: 100%;
    padding: 1rem;
+   height: calc(100% - 140px);
+   background-image: url("../img/wallpaper.png");
  }
 .sent-message {
-  background-color: lightgreen;
+  background-color: #D5F9BA;
   padding: 5px;
   margin: 5px 0;
+  font-size: 1.2rem;
+}
 
+/* HEADER MAIN */
+
+header .contact-chat {
+   display: flex;
+   align-items: center;
+   padding-left: 10px;
+}
+
+main header img {
+  height: 50px;
+  border-radius: 50%;
+  margin-right: 5px;
+}
+
+header .icon-nav {
+   display: flex;
+   justify-content: space-around;
+   align-items: center;
+   min-width: 10%;
+   font-size: 1.3rem;
+   color: #B3B3B3;
+}
+
+/* FOOTER */
+
+main footer {
+
+  font-size: 1.3rem;
+  color: #6A7376;
+}
+main footer .emoji, main footer .record {
+  width: 5%;
+  text-align: center;
+}
+main footer .input {
+  height: 100%;
+  width: 90%;
+}
+
+main footer #message {
+  height: 100%;
+  width: 90%;
+  border: none;
+  border-radius: 5px;
+  text-align: right;
+  padding: 0 10px;
+
+}
+main footer button {
+  height: 100%;
+  width: 8%;
 }
