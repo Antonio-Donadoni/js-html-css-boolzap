@@ -59,10 +59,20 @@ function init() {
       $(this).toggle($(this).find("h4").text().toLowerCase().indexOf(searchWord) > -1)
    });
  });
+ //CLICK SU DROPDOWN
 
- $("#chat-main i").click(function() {
+ $("body").on("click", "#chat-main i", function() {
  $(this).siblings(".dropdown-menu").toggle();
  });
+
+  //CANCEl button
+  
+  $("body").on("click", ".sent-message .cancel", function() {
+  $(this).parents(".sent-message").remove();
+  });
+  $("body").on("click", ".answer .cancel", function() {
+  $(this).parents(".answer").remove();
+  });
 
 };
 

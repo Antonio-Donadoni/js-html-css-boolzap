@@ -228,6 +228,11 @@ aside header .icon-nav{
 .dropdown-menu ul li {
  height: 30px;
  padding: 5px;
+ cursor: pointer;
+}
+
+.dropdown-menu ul li:hover {
+  background-color: #B7B9BB;
 }
 
 /* FOOTER */
