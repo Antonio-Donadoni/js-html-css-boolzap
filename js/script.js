@@ -11,11 +11,15 @@ function sendMsg() {
 
 function addAnswer() {
   var myClone = $('.template .answer').clone();
-  var dt = new Date();
-  var time = dt.getHours() + ":" + dt.getMinutes()
-  myClone.children("span").text(time);
+  myClone.children("span").text(getHour());
   $('#chat-main').append(myClone);
 };
+
+function getHour() {
+  var dt = new Date();
+  var time = dt.getHours() + ":" + dt.getMinutes()
+  return time;
+}
 
 function init() {
   // MANDA MESSAGGIO CLICK BTN
@@ -39,7 +43,14 @@ function init() {
     $("#message").val(" ");
   }
   });
-}
 
+  // SEARCH BAR
+  $('#searchbar').keyup(function(event){
+  var searchWord =  $("#searchbar").val().toLowerCase();
+  $(".contact").filter(function() {
+    $(this).toggle($(this).find("h4").text().toLowerCase().indexOf(searchWord) > -1)
+  });
+});
+};
 
 $( document ).ready(init);
