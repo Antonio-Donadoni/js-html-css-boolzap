@@ -21,6 +21,14 @@ function getHour() {
   return time;
 }
 
+// function clickDropdown() {
+//   $(".fa-chevron-down").click(function() {
+//    $(this).siblings(".dropdown-menu").show();
+//   });
+// }
+
+
+
 function init() {
   // MANDA MESSAGGIO CLICK BTN
   var sendBtn = $("#send-button");
@@ -47,10 +55,17 @@ function init() {
   // SEARCH BAR
   $('#searchbar').keyup(function(event){
   var searchWord =  $("#searchbar").val().toLowerCase();
-  $(".contact").filter(function() {
-    $(this).toggle($(this).find("h4").text().toLowerCase().indexOf(searchWord) > -1)
-  });
-});
+    $(".contact").filter(function() {
+      $(this).toggle($(this).find("h4").text().toLowerCase().indexOf(searchWord) > -1)
+   });
+ });
+
+ $("#chat-main i").click(function() {
+ $(this).siblings(".dropdown-menu").toggle();
+ });
+
 };
+
+
 
 $( document ).ready(init);

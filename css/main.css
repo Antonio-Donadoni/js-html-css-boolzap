@@ -160,12 +160,23 @@ aside header .icon-nav{
  }
 .sent-message {
   background-color: #D5F9BA;
-  padding: 12px;
+  padding: 12px 20px 12px 12px;
   margin: 5px 0;
   font-size: 1.25rem;
   border-radius: 5px;
   position: relative;
 }
+
+.answer {
+  background-color: #EAEAEA;
+  padding: 12px 20px 12px 12px;
+  margin: 5px 0;
+  font-size: 1.25rem;
+  border-radius: 5px;
+  align-self: flex-start;
+  position: relative;
+}
+
 .sent-message span, .answer span {
   font-size: 0.7rem;
   color: #B7B9BB;
@@ -175,14 +186,48 @@ aside header .icon-nav{
   font-size: bold;
 }
 
-.answer {
-  background-color: #EAEAEA;
-  padding: 12px;
-  margin: 5px 0;
-  font-size: 1.25rem;
+.sent-message i, .answer i {
+  font-size: 0.9rem;
+  color: #B7B9BB;
+  position: absolute;
+  top: 55%;
+  transform: translateY(-50%);
+  right: 5px;
+  font-size: bold;
+  opacity: 0;
+  transition: all 0.2s;
+}
+
+.sent-message:hover i, .answer:hover i {
+  opacity: 1;
+}
+
+.dropdown-menu {
+  width: 180px;
+  position: absolute;
+  bottom: -50px;
+  right: 0;
+  height: 60px;
+  background-color: #fff;
+  box-shadow: 1px 1px 5px #B7B9BB,
+              -1px -1px 5px #B7B9BB;
   border-radius: 5px;
-  align-self: flex-start;
-  position: relative;
+  font-size: 1rem;
+  display: none;
+  z-index: 999;
+}
+
+.answer .dropdown-menu{
+  position: absolute;
+  left: 0;
+}
+
+.dropdown-menu ul{
+  list-style: none;
+}
+.dropdown-menu ul li {
+ height: 30px;
+ padding: 5px;
 }
 
 /* FOOTER */
