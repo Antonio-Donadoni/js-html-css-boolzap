@@ -58,20 +58,8 @@ function init() {
       $(this).toggle($(this).find("h4").text().toLowerCase().indexOf(searchWord) > -1)
    });
  });
- //CLICK SU DROPDOWN
 
- $("body").on("click", "#chat-main i", function() {
- $(this).siblings(".dropdown-menu").toggle();
- });
 
-  //CANCEl button
-
-  $("body").on("click", ".sent-message .cancel", function() {
-  $(this).parents(".sent-message").remove();
-  });
-  $("body").on("click", ".answer .cancel", function() {
-  $(this).parents(".answer").remove();
-  });
 
 // Cambiare chat
     var contact = $(".contact");
@@ -79,17 +67,34 @@ function init() {
       // evidenzio chat attiva a sinista
       $(".contact").removeClass("active");
       $(this).addClass("active");
-      // cambio nome e img in alto a sinistra
+      // cambio nome e img in alto a destra
       var name = $(this).find("h4").text();
       var img = $(this).find("img").attr("src");
       $("main .contact-img").find("h4").text(name);
       $("main .contact-img").find("img").attr("src", img);
-      //cambio schermata chat 
+      //cambio schermata chat
       var dataPosition = $(this).data("position");
       $(".chat-main").removeClass("active");
       $('.chat-main[data-position=' + dataPosition + ']').addClass("active");
 
     });
+
+    //CLICK SU DROPDOWN
+
+    $("body").on("click", ".chat-main i", function() {
+      $(this).siblings(".dropdown-menu").toggle();
+    });
+
+    //CANCEl button
+
+    $("body").on("click", ".sent-message .cancel", function() {
+      $(this).parents(".sent-message").remove();
+    });
+
+    $("body").on("click", ".answer .cancel", function() {
+      $(this).parents(".answer").remove();
+    });
+
 
 };
 
