@@ -6,7 +6,6 @@ function sendMsg() {
   myClone.children("p").text(myMessage);
   myClone.children("span").text(time);
   $('#chat-main').append(myClone);
-
 }
 
 function addAnswer() {
@@ -66,13 +65,27 @@ function init() {
  });
 
   //CANCEl button
-  
+
   $("body").on("click", ".sent-message .cancel", function() {
   $(this).parents(".sent-message").remove();
   });
   $("body").on("click", ".answer .cancel", function() {
   $(this).parents(".answer").remove();
   });
+
+// add class
+    var contact = $(".contact");
+    contact.click(function() {
+      $(".contact").removeClass("active");
+      $(this).addClass("active");
+      var name = $(this).find("h4").text();
+      var img = $(this).find("img").attr("src");
+      console.log(name);
+      console.log(img);
+      $("main .contact-img").find("h4").text(name);
+      $("main .contact-img").find("img").attr("src", img);
+
+    });
 
 };
 
