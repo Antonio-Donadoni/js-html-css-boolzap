@@ -37,7 +37,7 @@
             <i class="fas fa-search"></i>
             <input id="searchbar" type="text" name="cerca" value="" placeholder="Cerca o inizia una nuova chat">
           </div>
-          <div class="contact active">
+          <div data-position="0" class="contact active">
             <div class="contact-img">
               <img src="img/avatar-man3.png" alt="">
               <div class="">
@@ -49,7 +49,7 @@
               <span>17:54</span>
             </div>
           </div>
-          <div class="contact">
+          <div data-position="1" class="contact">
             <div class="contact-img">
               <img src="img/avatar_uomo.jpg" alt="">
               <div class="">
@@ -61,7 +61,7 @@
               <span>17:54</span>
             </div>
           </div>
-          <div class="contact">
+          <div data-position="2" class="contact">
             <div class="contact-img">
               <img src="img/avatar_uomo.jpg" alt="">
               <div class="">
@@ -73,7 +73,7 @@
               <span>17:54</span>
             </div>
           </div>
-          <div class="contact">
+          <div data-position="3" class="contact">
             <div class="contact-img">
               <img src="img/avatar-woman2.jpg" alt="">
               <div class="">
@@ -85,35 +85,11 @@
               <span>17:54</span>
             </div>
           </div>
-          <div class="contact">
+          <div data-position="4" class="contact">
             <div class="contact-img">
               <img src="img/avatar-woman.png" alt="">
               <div class="">
                 <h4 class="contactname">Nadia</h4>
-                <span>Buongiorno a te</span>
-              </div>
-            </div>
-            <div class="last-msg-time">
-              <span>17:54</span>
-            </div>
-          </div>
-          <div class="contact">
-            <div class="contact-img">
-              <img src="img/avatar_uomo.jpg" alt="">
-              <div class="">
-                <h4 class="contactname">Tommaso</h4>
-                <span>Buongiorno a te</span>
-              </div>
-            </div>
-            <div class="last-msg-time">
-              <span>17:54</span>
-            </div>
-          </div>
-          <div class="contact">
-            <div class="contact-img">
-              <img src="img/avatar_uomo2.jpg" alt="">
-              <div class="">
-                <h4 class="contactname">Elia</h4>
                 <span>Buongiorno a te</span>
               </div>
             </div>
@@ -141,32 +117,126 @@
             <i class="fas fa-ellipsis-v"></i>
           </div>
         </header>
-        <div id="chat-main">
-          <div class="template" style="display: none;">
-            <div class="sent-message">
-              <p>Ciao</p>
-              <span></span>
-              <i class="fas fa-chevron-down"></i>
-              <div class="dropdown-menu">
-                <ul>
-                  <li>Informazioni</li>
-                  <li class="cancel">Elimina messaggio</li>
-                </ul>
-              </div>
+        <div data-position="0" class="chat-main ">
+          <div class="sent-message">
+            <p>Ciao</p>
+            <span></span>
+            <i class="fas fa-chevron-down"></i>
+            <div class="dropdown-menu">
+              <ul>
+                <li>Informazioni</li>
+                <li class="cancel">Elimina messaggio</li>
+              </ul>
             </div>
-            <div class="answer">
-              <p>Ok</p>
-              <span></span>
-              <i class="fas fa-chevron-down"></i>
-              <div class="dropdown-menu">
-                <ul>
-                  <li>Informazioni</li>
-                  <li class="cancel">Elimina messaggio</li>
-                </ul>
-              </div>
+          </div>
+          <div class="answer">
+            <p>Ok</p>
+            <span></span>
+            <i class="fas fa-chevron-down"></i>
+            <div class="dropdown-menu">
+              <ul>
+                <li>Informazioni</li>
+                <li class="cancel">Elimina messaggio</li>
+              </ul>
             </div>
           </div>
         </div>
+      <div data-position="1" class="chat-main active">
+        <div class="sent-message">
+          <p>Buongiorno, tutto bene?</p>
+          <span></span>
+          <i class="fas fa-chevron-down"></i>
+          <div class="dropdown-menu">
+            <ul>
+              <li>Informazioni</li>
+              <li class="cancel">Elimina messaggio</li>
+            </ul>
+          </div>
+        </div>
+        <div class="answer">
+          <p>Si tutto bene, tu?</p>
+          <span></span>
+          <i class="fas fa-chevron-down"></i>
+          <div class="dropdown-menu">
+            <ul>
+              <li>Informazioni</li>
+              <li class="cancel">Elimina messaggio</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div data-position="2" class="chat-main ">
+        <div class="sent-message">
+          <p>Ciao mitico</p>
+          <span></span>
+          <i class="fas fa-chevron-down"></i>
+          <div class="dropdown-menu">
+            <ul>
+              <li>Informazioni</li>
+              <li class="cancel">Elimina messaggio</li>
+            </ul>
+          </div>
+        </div>
+        <div class="answer">
+          <p>CIAOOOOOOO</p>
+          <span></span>
+          <i class="fas fa-chevron-down"></i>
+          <div class="dropdown-menu">
+            <ul>
+              <li>Informazioni</li>
+              <li class="cancel">Elimina messaggio</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div data-position="3" class="chat-main ">
+        <div class="sent-message">
+          <p>Ciao come stai?</p>
+          <span></span>
+          <i class="fas fa-chevron-down"></i>
+          <div class="dropdown-menu">
+            <ul>
+              <li>Informazioni</li>
+              <li class="cancel">Elimina messaggio</li>
+            </ul>
+          </div>
+        </div>
+        <div class="answer">
+          <p>Non troppo bene</p>
+          <span></span>
+          <i class="fas fa-chevron-down"></i>
+          <div class="dropdown-menu">
+            <ul>
+              <li>Informazioni</li>
+              <li class="cancel">Elimina messaggio</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div data-position="4" class="chat-main ">
+        <div class="sent-message">
+          <p>Ciao mitico</p>
+          <span></span>
+          <i class="fas fa-chevron-down"></i>
+          <div class="dropdown-menu">
+            <ul>
+              <li>Informazioni</li>
+              <li class="cancel">Elimina messaggio</li>
+            </ul>
+          </div>
+        </div>
+        <div class="answer">
+          <p>CIAOOOOOOO</p>
+          <span></span>
+          <i class="fas fa-chevron-down"></i>
+          <div class="dropdown-menu">
+            <ul>
+              <li>Informazioni</li>
+              <li class="cancel">Elimina messaggio</li>
+            </ul>
+          </div>
+        </div>
+      </div>
         <footer>
           <div class="emoji">
             <i class="far fa-smile-beam"></i>
@@ -180,7 +250,34 @@
           </div>
         </footer>
       </main>
+<!-- TEMPLATE -->
 
+      <div id="chat-main"class="chat-main">
+        <div class="template" style="display: none;">
+          <div class="sent-message">
+            <p>Ciao</p>
+            <span></span>
+            <i class="fas fa-chevron-down"></i>
+            <div class="dropdown-menu">
+              <ul>
+                <li>Informazioni</li>
+                <li class="cancel">Elimina messaggio</li>
+              </ul>
+            </div>
+          </div>
+          <div class="answer">
+            <p>Ok</p>
+            <span></span>
+            <i class="fas fa-chevron-down"></i>
+            <div class="dropdown-menu">
+              <ul>
+                <li>Informazioni</li>
+                <li class="cancel">Elimina messaggio</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
   <script type="text/javascript" src="js/script.js"></script>
  </body>
 </html>

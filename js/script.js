@@ -5,13 +5,13 @@ function sendMsg() {
   var time = dt.getHours() + ":" + dt.getMinutes()
   myClone.children("p").text(myMessage);
   myClone.children("span").text(time);
-  $('#chat-main').append(myClone);
+  $('.chat-main.active').append(myClone);
 }
 
 function addAnswer() {
   var myClone = $('.template .answer').clone();
   myClone.children("span").text(getHour());
-  $('#chat-main').append(myClone);
+  $('.chat-main.active').append(myClone);
 };
 
 function getHour() {
@@ -73,17 +73,21 @@ function init() {
   $(this).parents(".answer").remove();
   });
 
-// add class
+// Cambiare chat
     var contact = $(".contact");
     contact.click(function() {
+      // evidenzio chat attiva a sinista
       $(".contact").removeClass("active");
       $(this).addClass("active");
+      // cambio nome e img in alto a sinistra
       var name = $(this).find("h4").text();
       var img = $(this).find("img").attr("src");
-      console.log(name);
-      console.log(img);
       $("main .contact-img").find("h4").text(name);
       $("main .contact-img").find("img").attr("src", img);
+      //cambio schermata chat 
+      var dataPosition = $(this).data("position");
+      $(".chat-main").removeClass("active");
+      $('.chat-main[data-position=' + dataPosition + ']').addClass("active");
 
     });
 

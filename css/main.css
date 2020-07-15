@@ -152,8 +152,7 @@ background-color: #E9EBEB;
 
 
 /* PARTE CHAT */
- #chat-main {
-   display: flex;
+ .chat-main {
    flex-direction: column;
    justify-content: flex-start;
    align-items: flex-end;
@@ -162,6 +161,10 @@ background-color: #E9EBEB;
    height: calc(100% - 140px);
    background-image: url("../img/wallpaper.png");
    overflow-y: auto;
+   display: none;
+ }
+ .chat-main.active {
+   display: flex;
  }
 .sent-message {
   background-color: #D5F9BA;
