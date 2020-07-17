@@ -20,14 +20,6 @@ function getHour() {
   return time;
 }
 
-// function clickDropdown() {
-//   $(".fa-chevron-down").click(function() {
-//    $(this).siblings(".dropdown-menu").show();
-//   });
-// }
-
-
-
 function init() {
   // MANDA MESSAGGIO CLICK BTN
   var sendBtn = $("#send-button");
