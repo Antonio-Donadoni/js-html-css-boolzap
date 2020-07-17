@@ -7,12 +7,12 @@ function sendMsg() {
   myClone.children("span").text(time);
   $('.chat-main.active').append(myClone);
 }
-
-function addAnswer() {
-  var myClone = $('.template .answer').clone();
-  myClone.children("span").text(getHour());
-  $('.chat-main.active').append(myClone);
-};
+// ?? RICHIAMO FUNZIONE CON ARGOMENTO E TIMEOUT NON FUNZIONA???
+// function addAnswer(position) {
+//   var myClone = $('.template .answer').clone();
+//   myClone.children("span").text(getHour());
+//   $('.chat-main[data-position =' + position + ']').append(myClone);
+// };
 
 function getHour() {
   var dt = new Date();
@@ -28,7 +28,12 @@ function init() {
   if ($("#message").val() != false) {
     sendMsg();
     // RISPOSTA DOPO 1 S
-    setTimeout(addAnswer, 1000);
+    var position = $('.chat-main.active').data("position");
+    setTimeout(function() {
+        var myClone = $('.template .answer').clone();
+        myClone.children("span").text(getHour());
+        $('.chat-main[data-position =' + position + ']').append(myClone);
+    }, 1000);
     $("#message").val(" ");
   }
 
@@ -38,7 +43,12 @@ function init() {
   if (event.which == 13 && $("#message").val() != false) {
     sendMsg();
     // RISPOSTA DOPO 1 S
-    setTimeout(addAnswer, 1000);
+    var position = $('.chat-main.active').data("position");
+    setTimeout(function() {
+        var myClone = $('.template .answer').clone();
+        myClone.children("span").text(getHour());
+        $('.chat-main[data-position =' + position + ']').append(myClone);
+    }, 1000);
     $("#message").val(" ");
   }
   });
@@ -75,6 +85,12 @@ function init() {
 
     $("body").on("click", ".chat-main i", function() {
       $(this).siblings(".dropdown-menu").toggle();
+    });
+    //CHIUDERE SE CLICK ESTERNO
+    $(document).click(function (event) {
+    if (($(event.target).hasClass('fa-chevron-down')) == false) {
+      $(".dropdown-menu").hide();
+    }
     });
 
     //CANCEl button
